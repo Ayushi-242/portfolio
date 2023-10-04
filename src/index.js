@@ -3,7 +3,7 @@ const app = express();
 const hbs = require('hbs');
 const path = require('path'); // Add this line to import the 'path' module
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 const static_path = path.join(__dirname, '../views');
 const partials_path = path.join(__dirname, '../views/partials');
 const model=require('./model/model');
@@ -52,13 +52,4 @@ app.listen(port, () => {
     console.log(`Listening to the port at ${port}`); // Note the use of backticks (`) for string interpolation
 });
 
-
-
-
-
-// // OWNNNN
-// app.use((err, req, res, next) => {
-//     console.error(err.stack);
-//     res.status(500).send('Something went wrong!');
-// });
 
